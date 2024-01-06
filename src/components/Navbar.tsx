@@ -1,20 +1,49 @@
-import Link from 'next/link';
-import { buttonVariants } from './ui/button';
-import { HandMetal } from 'lucide-react';
+"use client";
 
-const Navbar = () => {
+import Image from "next/image";
+import Link from "next/link";
+import Usericon from "../components/icons/Usericon";
+
+const Header = () => {
   return (
-    <div className=' bg-zinc-100 py-2 border-b border-s-zinc-200 fixed w-full z-10 top-0'>
-      <div className='container flex items-center justify-between'>
-        <Link href='/'>
-          <HandMetal />
-        </Link>
-        <Link className={buttonVariants()} href='/sign-in'>
-          Sign in
-        </Link>
-      </div>
+    <div>
+      <header className="bg-gradient-to-r from-[#FAFAFA] from-0% to-[#FCFCFC] to-100% flex items-center justify-between z-100">
+        <div>
+          <Link href="/">
+            <Image src="/Logo 3.png" width={100} height={70} alt="logo" />
+          </Link>
+        </div>
+
+        <nav className="flex items-center justify-between ">
+          <ul className="hidden md:flex  gap-6 font-semibold text-gray-500 sm:hidden ">
+            <Link className="text-green-500" href={"/"}>
+              Home
+            </Link>
+            <Link href={"/menu"}>Menu</Link>
+            <Link href={"/order"}>Order</Link>
+            <Link href={"/about"}>About</Link>
+            <Link href={"/contact"}>Contact</Link>
+          </ul>
+        </nav>
+
+        <nav className="flex items-center gap-4 font-semibold">
+          <Link
+            href="/sign-in"
+            className="flex items-center text-white gap-1 bg-slate-400 px-6 py-2 rounded-full shadow-md"
+          >
+            <Usericon /> Login
+          </Link>
+
+          <Link
+            href="/register"
+            className="hidden  md:flex items-center text-white gap-1 bg-green-500 px-6  py-2  rounded-full  shadow-md lg:hidden sm:hidden"
+          >
+            <Usericon /> Register{" "}
+          </Link>
+        </nav>
+      </header>
     </div>
   );
 };
 
-export default Navbar;
+export default Header;
