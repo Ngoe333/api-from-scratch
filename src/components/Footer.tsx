@@ -1,9 +1,14 @@
+// import Link from 'next/link'
+import Image from 'next/image'
+
+
+
 function Footer() {
     return (
         <div className="md:bg-gradient-to-r from-[#FAFAFA] from-0% to-[#FCFCFC] to-100% ">
             <footer className=" md:footer xl:px24 py-10 px-4 flex items-center justify-between">
-                <aside className="flex items-center justify-center flex-col text-center">
-                    <img src="/Logo 3.png" alt="Footer Logo" />
+                <aside className="flex items-center justify-center flex-col text-center">  
+                        <Image src="/LOGO.png" width={70} height={20} alt="logo" />                  
                     <p className="">
                         Votre Satisfaction
                         <br />

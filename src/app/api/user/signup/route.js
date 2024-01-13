@@ -3,7 +3,7 @@ import User from '@/models/user.js';
 import { NextRequest, NextResponse } from 'next/server';
 import bcrypt from 'bcryptjs';
 import * as z from 'zod';
-dbConnect()
+dbConnect();
 
 const userSchema = z
   .object({
@@ -17,10 +17,10 @@ const userSchema = z
   })
   
 
-export async function POST (request: NextRequest) {
+export async function POST (req) {
     try {
 
-        const resBody = await request.json();
+        const resBody = await req.json();
         const {username, email, password} = userSchema.parse(resBody);
 
         // ---- Check if user already existe -----
@@ -54,7 +54,7 @@ export async function POST (request: NextRequest) {
            
         }, {status:(201)})
         
-    } catch (error: any) {
+    } catch (error) {
         return NextResponse.json({error: error.message},
             {status:(500)})
         

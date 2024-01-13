@@ -3,14 +3,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import Usericon from "../components/icons/Usericon";
+import Cardicon from "./icons/Cardicon";
 
 const Header = () => {
   return (
     <div>
-      <header className="bg-gradient-to-r from-[#FAFAFA] from-0% to-[#FCFCFC] to-100% flex items-center justify-between z-100">
+      <header className="bg-gradient-to-r from-[#feb9b9] from-0% to-[#FCFCFC] to-100% flex items-center justify-between z-100">
         <div>
           <Link href="/">
-            <Image src="/Logo 3.png" width={100} height={70} alt="logo" />
+            <Image src="/LOGO.png" width={70} height={20} alt="logo" />
           </Link>
         </div>
 
@@ -26,13 +27,18 @@ const Header = () => {
           </ul>
         </nav>
 
+        <div className="absolute right-40">
+          <Cardicon />
+        </div>
+
+
         <nav className="flex items-center gap-4 font-semibold">
           <Link
             href="/sign-in"
             className="flex items-center text-white gap-1 bg-slate-400 px-6 py-2 rounded-full shadow-md"
           >
-            <Usericon /> Login
-          </Link>
+            <Usericon /> Logins </Link>
+
 
           <Link
             href="/register"
