@@ -1,6 +1,6 @@
 import dbConnect from '@/mongo/db.config.js';
 import User from '@/models/user.js';
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 import bcrypt from 'bcryptjs';
 import * as z from 'zod';
 dbConnect();
@@ -27,10 +27,7 @@ export async function POST (req) {
         const userExiste = await User.findOne({email})
 
         if(userExiste) {
-
-            return NextResponse.json({error: 'Email already exists'})
-            
-         
+            return NextResponse.json({error: 'Email already exists'})     
         }
 
         const salt = bcrypt.genSaltSync(10)
@@ -62,5 +59,9 @@ export async function POST (req) {
         
     }
 
+    
+
 }
+
+
 

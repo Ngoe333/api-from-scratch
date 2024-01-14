@@ -4,7 +4,7 @@ import RightIcon from './icons/RightIcon';
 
 function Ourservices() {
     return (
-        <div className="section-container my-16 py-10">
+        <div className="section-container my-16 py-10 px-4">
             <div className="flex flex-col md:flex-row items-center justify-between gap-12">
 
                 {/* ------ text ------  */}
@@ -20,8 +20,8 @@ function Ourservices() {
                             assumenda.
                         </blockquote>
 
-                        <button className=" flex gap-2 items-center text-white btc px-6 py-2 bg-green-500 rounded-full mt-6 font-semibold border shadow-md">
-                            Explore <RightIcon />{" "}
+                        <button className="md:flex gap-2 items-center justify-between text-white btc px-6 py-2 bg-green-500 rounded-full mt-6 font-semibold border shadow-md">
+                            Explore <RightIcon />
                         </button>
                     </div>
                 </div>
@@ -31,22 +31,22 @@ function Ourservices() {
                 <div className="md:w-1/2">
 
                     <div className="grid  sm:grid-cols-2 grid-cols-2 gap-8 items-center">
-                        <div className="shadow-md rounded-sm py-5 px-2 flex flex-col items-center text-center space-y-2 text-green-500 cursor-pointer hover:border-indigo-600 transition-all duration-30 hover:border">
+                        <div className="shadow-md rounded-sm py-5 px-2 flex flex-col items-center text-center space-y-2 text-green-500 cursor-pointer">
                             <Image src={'/services/icon1.png'} width={30} height={30} alt='' />
                             <h5 className='font-bold pt-3 text-black'>Reservation</h5>
                         </div>
 
-                        <div className="shadow-md rounded-sm py-5 px-4 flex flex-col items-center text-center space-y-2 text-green-500 cursor-pointer hover:border-indigo-600 transition-all duration-30 hover:border">
+                        <div className="shadow-md rounded-sm py-5 px-4 flex flex-col items-center text-center space-y-2 text-green-500 cursor-pointer">
                             <Image src={'/services/icon2.png'} width={30} height={30} alt='' />
                             <h5 className='font-bold pt-3 text-black'>Delivery</h5>
                         </div>
 
-                        <div className="shadow-md rounded-sm py-5 px-4 flex flex-col items-center text-center space-y-2 text-green-500 cursor-pointer hover:border-indigo-600 transition-all duration-30 hover:border">
+                        <div className="shadow-md rounded-sm py-5 px-4 flex flex-col items-center text-center space-y-2 text-green-500 cursor-pointer">
                             <Image src={'/services/icon3.png'} width={30} height={30} alt='' />
                             <h5 className='font-bold pt-3 text-black'>Tracking Order</h5>
                         </div>
 
-                        <div className="shadow-md rounded-sm py-5 px-4 flex flex-col items-center text-center space-y-2 text-green-500 cursor-pointer hover:border-indigo-600 transition-all duration-30 hover:border">
+                        <div className="shadow-md rounded-sm py-5 px-4 flex flex-col items-center text-center space-y-2 text-green-500 cursor-pointer">
                             <Image src={'/services/icon4.png'} width={30} height={30} alt='' />
                             <h5 className='font-bold pt-3 text-black'>Online Order</h5>
                         </div>

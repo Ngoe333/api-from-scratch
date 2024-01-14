@@ -27,7 +27,7 @@ const Header = () => {
           </ul>
         </nav>
 
-        <div className="absolute right-40">
+        <div className="absolute right-40 cursor-pointer md:right-40 xl:right-72 ">
           <Cardicon />
         </div>
 
@@ -42,7 +42,7 @@ const Header = () => {
 
           <Link
             href="/register"
-            className="hidden  md:flex items-center text-white gap-1 bg-green-500 px-6  py-2  rounded-full  shadow-md lg:hidden sm:hidden"
+            className="hidden  flex items-center text-white gap-1 bg-green-500 px-6  py-2  rounded-full  shadow-md lg:hidden sm:hidden"
           >
             <Usericon /> Register{" "}
           </Link>

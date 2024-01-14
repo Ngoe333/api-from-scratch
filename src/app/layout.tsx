@@ -3,6 +3,7 @@ import Footer from '@/components/Footer';
 import '@/styles/globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import  { Toaster } from 'react-hot-toast';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -23,6 +24,10 @@ export default function RootLayout({
           <Navbar />
           {children}
           <Footer />
+          <Toaster
+            position="top-center"
+            reverseOrder={false}
+          />
         </main>
       </body>
     </html>

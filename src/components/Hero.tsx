@@ -7,15 +7,15 @@ const Hero = () => {
         <>
             <main>
                 {/* Hero Section  */}
-                <section className=" md:flex items-center justify-betwee lg:justify-between xl:justify-between  mt-10 sm: ">
-                    <div>
-                        <h1 className="text-center mt-4 md:text-5xl text-4xl font-bold md:leading-snug leading-snug">
+                <section className="px-4 text-left md:flex items-center justify-between  mt-10 sm: ">
+                    <div className="">
+                        <h1 className="mt-4 md:text-5xl text-4xl font-bold  md:leading-snug leading-snug  ">
                             Faites Vous Achats <br /> Au Marché <br />{" "}
                             <span className="text-green-500">Grand-Hangar</span> <br />
                             Sans Vous Deplacer
                         </h1>
 
-                        <p className="text-center mt-4 md:text-1xl">
+                        <p className="mt-4  md:text-1xl">
                             Where Eacch Plate Weaves a Story of Culinary Mastery <br /> and
                             Passionate
                         </p>

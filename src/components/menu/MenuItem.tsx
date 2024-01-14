@@ -18,7 +18,7 @@ const MenuItem = () => {
           Lorem ipsum dolor, sit amet consectetur <br /> adipisicing elit.
         </p>
 
-        <button className="text-white bg-green-500 rounded-full px-6 py-2 mt-4 shadow-md flex items-center gap-2 ">
+        <button className="text-white bg-green-500 rounded-full px-6 py-2 mt-4 shadow-md flex items-center gap-2 md:px-4 ">
           Add to <Cardicon />
         </button>
       </div>

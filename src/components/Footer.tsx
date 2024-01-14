@@ -1,40 +1,41 @@
 // import Link from 'next/link'
 import Image from 'next/image'
+import Link from 'next/link'
 
 
 
 function Footer() {
     return (
         <div className="md:bg-gradient-to-r from-[#FAFAFA] from-0% to-[#FCFCFC] to-100% ">
-            <footer className=" md:footer xl:px24 py-10 px-4 flex items-center justify-between">
+            <footer className="flex-col md:footer xl:px24 py-10 px-4 flex items-center justify-between">
                 <aside className="flex items-center justify-center flex-col text-center">  
                         <Image src="/LOGO.png" width={70} height={20} alt="logo" />                  
-                    <p className="">
+                    <p className=" ">
                         Votre Satisfaction
                         <br />
                         Es Notre Prioriter
                     </p>
                 </aside>
-                <nav>
-                    <header className="footer-title">USEFUL LINKS</header>
-                    <a className="link link-hover">Branding</a>
-                    <a className="link link-hover">Design</a>
+                <nav className=' flex flex-col'>
+                    <header className="footer-title mt-2">USEFUL LINKS</header>
+                    <a className="link link-hover  flex flex-col items-center justify-center">Menus</a>
+                    <a className="link link-hover  flex flex-col items-center justify-center">Order</a>
                 </nav>
                 <nav>
-                    <header className="footer-title">Company</header>
-                    <a className="link link-hover">About us</a>
-                    <a className="link link-hover">Contact</a>
+                    <header className="footer-title mt-2">Company</header>
+                    <Link href={'/about'} className="link link-hover flex flex-col items-center justify-center">About Us</Link>
+                    <Link href={'/contact'} className="link link-hover flex flex-col items-center justify-center">Contact</Link>
                 </nav>
                 <nav>
-                    <header className="footer-title">CONTACT-US</header>
-                    <a className="link link-hover">Terms of use</a>
-                    <a className="link link-hover">Privacy policy</a>
+                    <header className="footer-title mt-2">CONTACT-US</header>
+                    <a className="link link-hover flex flex-col items-center justify-center">Terms of use</a>
+                    <a className="link link-hover flex flex-col items-center justify-center">Privacy policy</a>
                 </nav>
             </footer>
 
             <hr />
 
-            <footer className="footer items-center p-4 xl:px24 py-10 px-4 flex-row-reverse flex justify-between">
+            <footer className="footer items-center p-4 xl:px24 py-10 px-4 flex-row-reverse flex justify-between gap-4">
                 <aside className="items-center grid-flow-col">
                     <p>Copyright © 2023 - All right reserved</p>
                 </aside>

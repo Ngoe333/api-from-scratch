@@ -16,6 +16,7 @@ import { Input } from '../ui/input';
 import { Button } from '../ui/button';
 import Link from 'next/link';
 import GoogleSignInButton from '../GoogleSignInButton';
+import toast from 'react-hot-toast';
 
 const FormSchema = z
   .object({
@@ -45,7 +46,7 @@ const SignUpForm = () => {
   });
 
   const onSubmit = async (values: z.infer<typeof FormSchema>) => {
-    const response = await fetch('/api/user/signup', {
+    const { ok } = await fetch('/api/user/signup', {
       method: 'POST',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -53,13 +54,16 @@ const SignUpForm = () => {
         email: values.email,
         password: values.password,
       }),
+      
     });
-
-    if(response.ok){
+    
+    
+    if (ok) {
+      toast.success('User Create Successfully!')
 
       route.push('/sign-in')
-      
-    } else{
+     
+    } else {
       console.error("Registration Faild")
 
     }
@@ -76,7 +80,7 @@ const SignUpForm = () => {
               <FormItem>
                 <FormLabel>Username</FormLabel>
                 <FormControl>
-                  <Input placeholder='johndoe' {...field} />
+                  <Input type='text' placeholder='johndoe' {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -89,7 +93,7 @@ const SignUpForm = () => {
               <FormItem>
                 <FormLabel>Email</FormLabel>
                 <FormControl>
-                  <Input placeholder='marketexpress@gmail.com' {...field} />
+                  <Input type='email' placeholder='marketexpress@gmail.com' {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -148,4 +152,10 @@ const SignUpForm = () => {
   );
 };
 
+
+
 export default SignUpForm;
+function saveSettings(settings: any): Promise<unknown> {
+  throw new Error('Function not implemented.');
+}
+

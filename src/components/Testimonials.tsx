@@ -4,7 +4,7 @@ import Image from "next/image";
 function Testimonials() {
     return (
         <>
-            <div className=" flex flex-col items-center justify-center mt-20 bg-slate-100">
+            <div className=" flex flex-col items-center justify-center mt-20 bg-slate-100 px-4">
                 <div className="flex flex-col md:flex-row items-center justify-between gap-12">
                     <div className="md:w-1/2">
                         {/* <img src="/testimonials.png" alt="" /> */}
