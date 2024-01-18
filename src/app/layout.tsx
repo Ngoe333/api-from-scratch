@@ -3,7 +3,8 @@ import Footer from '@/components/Footer';
 import '@/styles/globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import  { Toaster } from 'react-hot-toast';
+import { Toaster } from 'react-hot-toast';
+import AppProvider from '@/components/AppProvider';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -20,14 +21,17 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={inter.className}>
-        <main className='md:max-w-7xl mx-auto  bg-[#FCFCFC] p-4 h-full'>
-          <Navbar />
-          {children}
-          <Footer />
-          <Toaster
-            position="top-center"
-            reverseOrder={false}
-          />
+        <main className='md:max-w-7xl mx-auto  bg-[#FCFCFC] p-4 h-full '>
+          <AppProvider>
+            <Navbar />
+            {children}
+            <Footer />
+            <Toaster
+              position="top-center"
+              reverseOrder={false}
+            />
+
+          </AppProvider>
         </main>
       </body>
     </html>

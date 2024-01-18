@@ -8,14 +8,9 @@ function Footer() {
     return (
         <div className="md:bg-gradient-to-r from-[#FAFAFA] from-0% to-[#FCFCFC] to-100% ">
             <footer className="flex-col md:footer xl:px24 py-10 px-4 flex items-center justify-between">
-                <aside className="flex items-center justify-center flex-col text-center">  
-                        <Image src="/LOGO.png" width={70} height={20} alt="logo" />                  
-                    <p className=" ">
-                        Votre Satisfaction
-                        <br />
-                        Es Notre Prioriter
-                    </p>
-                </aside>
+                {/* <aside className="flex items-center justify-center flex-col text-center">  
+                       <Link href='/'><Image src="/LOGO.svg" width={70} height={20} alt="logo" /></Link>                                      
+                </aside> */}
                 <nav className=' flex flex-col'>
                     <header className="footer-title mt-2">USEFUL LINKS</header>
                     <a className="link link-hover  flex flex-col items-center justify-center">Menus</a>

@@ -1,6 +1,6 @@
 import NextAuth  from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
-// import bcrypt from 'bcryptjs';
+import bcrypt from 'bcryptjs';
 import dbConnect from '@/mongo/db.config.js';
 import User from '@/models/user.js';
 
@@ -27,8 +27,17 @@ const handler = NextAuth({
                 password: { label: "Password", type: "password" }
             },
             async authorize(credentials, req) {
-                const {email, password: any} = credentials;
+                const email = credentials?.email;
+                const password = credentials?.password;
+                    
                 const existUser = await User.findOne({email})
+                const passwordOk = existUser &&  bcrypt.compareSync(password, existUser.password);
+                consle.log(passwordOk)
+
+                if(passwordOk){
+                    return existUser
+                    
+                }
 
 
 
@@ -49,4 +58,4 @@ const handler = NextAuth({
 
   
    
-    export {handler as GET, handler as Post};
+    export {handler as GET, handler as POST};

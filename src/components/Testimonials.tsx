@@ -5,13 +5,13 @@ function Testimonials() {
     return (
         <>
             <div className=" flex flex-col items-center justify-center mt-20 bg-slate-100 px-4">
-                <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-12 text-left">
                     <div className="md:w-1/2">
                         {/* <img src="/testimonials.png" alt="" /> */}
                         <Image src={'/testimonials.png'} width={400} height={400} alt="" />
                     </div>
                     <div className="md:w-1/2">
-                        <div className="md:space-y-7 text-center lg:text-left">
+                        <div className="text-center sm: md:space-y-7 text-left lg:text-left">
                             <p className=" text-red-500 uppercase tracking-wide font-medium text-lg">
                                 Testimonials
                             </p>
@@ -21,14 +21,14 @@ function Testimonials() {
                             </h2>
 
                             <blockquote className="text-black my-5 leading-[30px]">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Erro
                                 laboriosam nulla sequi fugiat repudiandae odit exercitationem
                                 assumendas.
                             </blockquote>
 
                             {/* ------ Avatart ----- */}
 
-                            <div className="item-center md:flex  flex-wrap gap-4 justify-start">
+                            <div className="item-cente  md:flex  flex-wrap gap-4 justify-start">
                                 <div className="avatar-group -space-x-6 rtl:space-x-reverse">
                                     <div className="avatar">
                                         <div className="w-12">

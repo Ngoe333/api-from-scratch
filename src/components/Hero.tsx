@@ -8,11 +8,11 @@ const Hero = () => {
             <main>
                 {/* Hero Section  */}
                 <section className="px-4 text-left md:flex items-center justify-between  mt-10 sm: ">
-                    <div className="">
-                        <h1 className="mt-4 md:text-5xl text-4xl font-bold  md:leading-snug leading-snug  ">
+                    <div className="mt-20 ">
+                        <h1 className="mt-12 md:text-5xl text-4xl font-bold  md:leading-snug leading-snug  ">
                             Faites Vous Achats <br /> Au Marché <br />{" "}
                             <span className="text-green-500">Grand-Hangar</span> <br />
-                            Sans Vous Deplacer
+                            Sans Vous Deplacez
                         </h1>
 
                         <p className="mt-4  md:text-1xl">
@@ -57,7 +57,7 @@ const Hero = () => {
                                         <input
                                             type="radio"
                                             name="rating-2"
-                                            className="mask mask-star-2 bg-yellow-500"
+                                            className="mask mask-star-2 bg-yellow-500 "
                                             readOnly
                                         />
                                         <input
